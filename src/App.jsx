@@ -1,5 +1,6 @@
 import './App.css'
 import NavBar from './components/NavBar'
+import ItemListContainer from './components/ItemListContainer'
 
 
 
@@ -7,8 +8,8 @@ function App() {
 
   return(
     <>
-    <h1  style={{color:'#555555', fontFamily:'arial'}}>Valentime Nails</h1>
     <NavBar/>
+    <ItemListContainer greeting='💅 Bienvenido a Valentime Nails 💅'/>
     </>
   )
 }
