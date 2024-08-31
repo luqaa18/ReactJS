@@ -7,13 +7,9 @@ export default function ButtonComponent({texto, color}){
         pointer:true,
     }
 
-    const handleClick = () => {
-        alert(`Estas en la sección ${texto}.`)
-    }
-
     return(
         <>
-        <button onClick = {handleClick} style={misEstilos}>{texto}</button>
+        <button style={misEstilos}>{texto}</button>
         </>
     )
 }

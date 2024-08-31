@@ -6,7 +6,7 @@ export default function CartWidget(){
 
     return(
         <>
-        <img style= {imgStyle} src="shopping-cart.png" alt="shopping-cart" />
+        <img style= {imgStyle} src="/shopping-cart.png" alt="shopping-cart" />
         <p style={{fontSize:16}}>3</p>
         </>
     )
