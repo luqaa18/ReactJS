@@ -1,8 +1,8 @@
 import './App.css'
-import Inicio from './components/Inicio.jsx'
-import ItemList from './components/ItemList.jsx'
-import ItemDetailContainer from './components/ItemDetailContainer.jsx'
 import NavBar from './components/NavBar.jsx'
+import ItemListContainer from './components/HomeView/ItemListContainer.jsx'
+import CategoryComponent from './components/CategoryComponent/CategoryComponent.jsx'
+import ItemDetailContainer from './components/ItemDetailContainer.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <Routes>
-        <Route exact path='/' element={<Inicio/>}/>  
-        <Route exact path='/productos' element={<ItemList/>}/>
-        <Route exact path='/producto/:prodID' element={<ItemDetailContainer/>}/>
+        <Route exact path='/' element={<ItemListContainer/>}/>
+        <Route exact path='/item/:id' element={<ItemDetailContainer/>}/>
+        <Route exact path='/category/:id' element={<CategoryComponent/>}/>
       </Routes>
     </BrowserRouter>
     </>

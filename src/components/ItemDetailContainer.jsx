@@ -1,28 +1,28 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getBikes } from '../asyncMock';
+import { getBike } from '../asyncMock';
 
 export default function ItemDetailContainer() {
-    const [producto, setProducto] = useState({});
-    const { prodID } = useParams();
+    const [item, setItem] = useState({});
+    const { id } = useParams();
 
     useEffect(() => {
         const fetchProducto = async () => {
-            const bike = await getBikes(prodID);
-            setProducto(bike)
+            const bike = await getBike(id);
+            setItem(bike)
         };
         fetchProducto();
-    }, [prodID]);
+    }, [id]);
 
     return (
         <>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div className='card'>
-                    <img src={producto.image} alt={producto.name} />
-                    <h2>{producto.name}</h2>
-                    <p>Marca: {producto.brand}</p>
-                    <p>Categoria: {producto.category}</p>
-                    <p>${producto.price}</p>
+                    <img src={item.image} alt={item.name} />
+                    <h2>{item.name}</h2>
+                    <p>Marca: {item.brand}</p>
+                    <p>Categoria: {item.category}</p>
+                    <p>${item.price}</p>
                 </div>
             </div>
         </>
