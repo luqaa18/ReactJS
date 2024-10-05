@@ -21,7 +21,6 @@ export default function NavBar({ }) {
                     <Link style={{ display: 'flex', justifyContent: 'flex-start', width: '25%' }} to={'/'}>
                         <div style={{ display: 'flex', justifyContent: 'flex-start', width: '25%' }}>
                             <img className='logotipo' src='/logo-bike.png' alt="logo" />
-                            {/* <h1 style={{ color: '#555555', fontFamily: 'arial', display: 'flex', alignItems: 'center', margin: 'auto' }}>P-FIXIE-T</h1> */}
                         </div>
                     </Link>
                 </div>

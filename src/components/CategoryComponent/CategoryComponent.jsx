@@ -1,22 +1,23 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getCategory } from '../../asyncMock';
 
 export default function CategoryComponent() {
   const [item, setItem] = useState([]);
-  const { id } = useParams();
+  const { idCat } = useParams();
 
   useEffect(() => {
     const fetchCategory = async () => {
-      const allProducts = await getCategory(id);
+      const allProducts = await getCategory(idCat);
       setItem(allProducts);
     };
     fetchCategory();
-  }, [id]);
+  }, [idCat]);
+
 
   return (
     <>
-      <h2 style={{ textAlign: 'center' }}>Estas en la categoría: {id}</h2>
+      <h2 style={{ textAlign: 'center' }}>Estas en la categoría: {idCat}</h2>
       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
         {item.map(item => (
           <div key={item.id} className='col-md-4 card'>
@@ -25,6 +26,9 @@ export default function CategoryComponent() {
             <p>Marca: {item.brand}</p>
             <p>Categoria: {item.category}</p>
             <p>${item.price}</p>
+            <button>
+              <Link to={`/item/${item.id}`}>Ver Detalles</Link>
+            </button>
           </div>
         ))}
       </div>

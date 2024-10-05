@@ -11,11 +11,11 @@ export default function ItemList() {
 
   return (
     <>
-    <h1 style={{textAlign:'center', padding:25}}>Bienvenidos a P-Fixie-T</h1>
+      <h1 style={{ textAlign: 'center', padding: 25 }}>Bienvenidos a P-Fixie-T</h1>
       <div className='container justify-content-center align-items-center'>
         <div className='row justify-content-center align-items-center'>
-          {bicicletas.map(bici => 
-            <ItemListContainer key={bici.id} bicicleta={bici} itemID={bici.id}/>
+          {bicicletas.map(bici =>
+            <ItemListContainer key={bici.id} bicicleta={bici} />
           )}
         </div>
       </div>

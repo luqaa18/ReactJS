@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import '../../assets/bootstrap.min.css'
 import './ItemListContainer.css'
 
-export default function ItemListContainer({bicicleta, itemID}) {
+export default function ItemListContainer({bicicleta}) {
     return (
         <>
             <div className='col-md-4 card'>
@@ -11,7 +11,7 @@ export default function ItemListContainer({bicicleta, itemID}) {
                 <p>Categoria: {bicicleta.category}</p>
                 <p>${bicicleta.price}</p>
                 <button>
-                    <Link to={`/item/${itemID}`}>Ver Detalles</Link>
+                    <Link to={`/item/${bicicleta.id}`}>Ver Detalles</Link>
                 </button>
             </div>
         </>
