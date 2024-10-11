@@ -1,0 +1,19 @@
+.mainDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        border: 0 solid white;
+        margin: 10px;
+        font-weight: 500;
+        height: 30px;
+        /* font-size: 17px; */
+
+    }
+
+    .masMenos {
+        width: 30px;
+
+    }
+}
